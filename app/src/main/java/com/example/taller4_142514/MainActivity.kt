@@ -1,47 +1,34 @@
 package com.example.taller4_142514
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.taller4_142514.ui.theme.Taller4142514Theme
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.widget.Button
+import java.util.*
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            Taller4142514Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        val greetingTextView = findViewById<TextView>(R.id.greetingTextView)
+        val buttonStart = findViewById<Button>(R.id.buttonStart)
+
+        // Cambiar el saludo según la hora del día
+        val currentTime = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
+        val greeting = when {
+            currentTime in 0..11 -> "Buenos días"
+            currentTime in 12..17 -> "Buenas tardes"
+            else -> "Buenas noches"
         }
-    }
-}
+        greetingTextView.text = greeting
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Taller4142514Theme {
-        Greeting("Android")
+        //Navegar a la principal
+        buttonStart.setOnClickListener {
+            val intent = Intent(this, PrincipalActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
