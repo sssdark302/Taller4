@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SimpleAdapter
+import com.example.taller4_142514.SimpleAdapter
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +22,7 @@ class FragmentDetalles : Fragment() {
 
         // Configurar RecyclerView
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewDetalles)
-        adapter = SimpleAdapter(selectedNames) {}
+        adapter = SimpleAdapter(selectedNames) { }
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 
