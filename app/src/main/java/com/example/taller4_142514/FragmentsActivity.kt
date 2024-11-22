@@ -2,8 +2,8 @@ package com.example.taller4_142514
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.taller1.FragmentDetalles
-import com.example.taller1.FragmentLista
+import com.example.taller4_142514.FragmentDetalles
+import com.example.taller4_142514.FragmentLista
 
 class FragmentsActivity : AppCompatActivity(), FragmentLista.OnItemSelectedListener {
 
