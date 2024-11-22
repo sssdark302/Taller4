@@ -5,7 +5,7 @@
     android:id="@+id/principalLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="20dp"
     android:background="@color/white"
     tools:context=".PrincipalActivity">
 
@@ -19,11 +19,12 @@
         android:textColorHint="@color/gray"
         android:backgroundTint="@color/purple_500"
         android:textSize="18sp"
-        android:padding="12dp"
+        android:padding="14dp"
+        android:elevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintWidth_percent="0.85" />
 
     <!-- Botón para guardar el nombre en SharedPreferences -->
     <Button
@@ -31,30 +32,31 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Guardar en SharedPreferences"
+        android:text="Guardar"
         android:textSize="18sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
-        android:padding="12dp"
+        android:padding="14dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@+id/nameEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintWidth_percent="0.85" />
 
     <!-- Texto que muestra el nombre guardado -->
     <TextView
         android:id="@+id/displayTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Su nombre es: "
+        android:layout_marginTop="24dp"
+        android:text="Nombre guardado: "
         android:textSize="20sp"
         android:textColor="@color/black"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/saveButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintWidth_percent="0.85" />
 
     <!-- Botones para interacción con la base de datos -->
     <Button
@@ -62,10 +64,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Guardar en Base de Datos"
+        android:text="Guardar en BD"
         android:textSize="16sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/displayTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -75,10 +79,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Cargar desde Base de Datos"
+        android:text="Cargar BD"
         android:textSize="16sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/saveToDbButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -88,10 +94,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Limpiar Base de Datos"
+        android:text="Limpiar BD"
         android:textSize="16sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/loadFromDbButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -106,6 +114,8 @@
         android:textSize="16sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/clearDbButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -116,10 +126,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Accediendo a Red"
+        android:text="Red"
         android:textSize="16sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/goToConfigButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -131,6 +143,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:progressTint="@color/purple_500"
         app:layout_constraintTop_toBottomOf="@id/btnStartTask"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -140,11 +153,13 @@
         android:id="@+id/btnGoToMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Volver al menú principal"
+        android:layout_marginTop="20dp"
+        android:text="Menú Principal"
         android:textSize="16sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/progressBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -155,12 +170,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Ir a Fragmentos"
+        android:text="Fragmentos"
         android:textSize="16sp"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/btnGoToMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintWidth_percent="0.85" />
 </androidx.constraintlayout.widget.ConstraintLayout>

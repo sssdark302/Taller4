@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".FragmentsActivity">
 
     <!-- Contenedor para FragmentLista -->
@@ -12,19 +13,25 @@
         android:id="@+id/fragmentContainerLista"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/light_gray"
+        android:elevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.45"
-        app:layout_constraintHeight_percent="0.9" />
+        app:layout_constraintWidth_percent="0.48"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <!-- Contenedor para FragmentDetalles -->
     <FrameLayout
         android:id="@+id/fragmentContainerDetalles"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/light_gray"
+        android:elevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.45"
-        app:layout_constraintHeight_percent="0.9" />
+        app:layout_constraintWidth_percent="0.48"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
